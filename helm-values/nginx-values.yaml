@@ -1,0 +1,17 @@
+controller:
+  service:
+    type: LoadBalancer
+    loadBalancerIP: ""
+    annotations:
+      service.beta.kubernetes.io/azure-load-balancer-resource-group: "MC_rg-aks-terraform_aks-terraform-cluster_eastus"
+
+  metrics:
+    enabled: true
+
+  resources:
+    requests:
+      cpu: 100m
+      memory: 90Mi
+    limits:
+      cpu: 200m
+      memory: 256Mi
